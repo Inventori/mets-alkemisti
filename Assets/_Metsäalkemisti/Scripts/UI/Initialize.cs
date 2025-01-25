@@ -1,4 +1,6 @@
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Initialize : MonoBehaviour
 {
@@ -7,15 +9,13 @@ public class Initialize : MonoBehaviour
     [SerializeField] private DebugControls _debugControls;
     [Header("Pan control")]
     [SerializeField] private PontikkaUI pontikkaUI;
-    
     [SerializeField] private HoboOrders orders;
-    
-    
-    //private DebugControls _debugController;
+    [SerializeField] private Image orderingHobo;
+  
     private PontikkaSystem _pontikkaSystem;
     
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Sequence _newCharacterSequence;
+    
     void Start()
     {
         _pontikkaSystem = new PontikkaSystem();
@@ -23,7 +23,6 @@ public class Initialize : MonoBehaviour
        
         if (_debug)
         {
-          //  _debugController = Instantiate(_debugControls, transform);
           _debugControls.Initialize(_pontikkaSystem);
         }
 
@@ -31,15 +30,17 @@ public class Initialize : MonoBehaviour
         pontikkaUI.Initialize(_pontikkaSystem);
         
     }
-
+    
+    
     void TickPontikka()
     {
         _pontikkaSystem.TickPontikka();
     }
-    
-    // Update is called once per frame
-    void Update()
-    {                                
-        
+
+    private Sequence NewCharacterSequence()
+    {
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(2.5f);
+        return sequence;
     }
 }
