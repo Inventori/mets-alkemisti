@@ -7,5 +7,5 @@ public class Order : ScriptableObject
     public float wantedPressure;
     public float wantedStir;
 
-    public SpriteRenderer hoboSprite;
+    public Sprite hoboSprite;
 }

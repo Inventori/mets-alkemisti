@@ -1,18 +1,32 @@
+using System;
 using UnityEngine;
 
 public class PontikkaSystem
 {
+    public enum Result
+    {
+        Perfect,
+        Good,
+        Okay,
+        Poor
+    }
+    
     private float _temperature;
     private float _pressure;
     private float _stir;
     private float _completePercentage;
+
+    private int _timer;
+    private bool _running;
     
     public float Temperature => _temperature;
     public float Pressure => _pressure;
     public float Stir => _stir;
     public float CompletePercentage => _completePercentage;
+    public int Timer => _timer;
 
-    public Order currentOrder;
+    private Order currentOrder;
+    public Action<bool> OnRoundEnd;
     
     public PontikkaSystem()
     {
@@ -25,7 +39,19 @@ public class PontikkaSystem
 
     public void TickPontikka()
     {
-        CheckGoalProgress();
+        if (!_running) return;
+        
+        if (_timer > 0)
+        {
+            CheckGoalProgress();
+            _timer--;
+        }
+        else
+        {
+            _running = false;
+            RoundEnded();
+        }
+    
     }
 
     public void AdjustPressure(float value)
@@ -51,6 +77,18 @@ public class PontikkaSystem
         }
 
         _completePercentage = CalculateOrderScore();
+    }
+
+    public void StartNewRound()
+    {
+        _timer = 20;
+        _running = true;
+    }
+
+    private void RoundEnded()
+    {
+        var success = CalculateOrderScore() > .5f;
+        OnRoundEnd?.Invoke(success);
     }
     
     private void PontikkaGoBoom()

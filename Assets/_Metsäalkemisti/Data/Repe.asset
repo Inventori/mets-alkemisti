@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b16386315a8e14794a0a7dfb6b808d52, type: 3}
-  m_Name: Pekka
+  m_Name: Repe
   m_EditorClassIdentifier: 
   wantedTemperature: 0.5
   wantedPressure: 0.3
   wantedStir: 0.7
-  hoboSprite: {fileID: 7508484680467009349, guid: a373d2774259a40e08f82cae40d0c092, type: 3}
+  hoboSprite: {fileID: -4646698770154453813, guid: 677a506b2364648f39f3cf5b9c3b46da, type: 3}
