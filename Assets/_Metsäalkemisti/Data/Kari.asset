@@ -15,4 +15,7 @@ MonoBehaviour:
   wantedTemperature: 0.5
   wantedPressure: 0.3
   wantedStir: 0.7
-  hoboSprite: {fileID: -201573519503496745, guid: ab6581f4ab5de4fde99198593e03126b, type: 3}
+  hoboSprite: {fileID: 21300000, guid: ab6581f4ab5de4fde99198593e03126b, type: 3}
+  ingredientsSprite: {fileID: 21300000, guid: 4b348d83c1c7842a0952d7c0e65c2452, type: 3}
+  succeededSprite: {fileID: 21300000, guid: a583548e475ec4b3e8130fb3a2c27636, type: 3}
+  failedSprite: {fileID: 21300000, guid: 422f803c87f7a4c88a81204b11dfda22, type: 3}

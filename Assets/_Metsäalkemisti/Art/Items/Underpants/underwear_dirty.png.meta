@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9903c1aa318d4677bcaa44be3f725c4
+guid: 4b348d83c1c7842a0952d7c0e65c2452
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1662843352530915255
-    second: char6_0
+      213: 9054706879141140898
+    second: underwear_dirty_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char6_0
+      name: underwear_dirty_0
       rect:
         serializedVersion: 2
-        x: 104
+        x: 69
         y: 91
-        width: 757
-        height: 3140
+        width: 3011
+        height: 2575
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 940764fe7c46ce8e0800000000000000
-      internalID: -1662843352530915255
+      spriteID: 2a95e74cee7c8ad70800000000000000
+      internalID: 9054706879141140898
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      char6_0: -1662843352530915255
+      underwear_dirty_0: 9054706879141140898
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

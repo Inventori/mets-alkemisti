@@ -8,7 +8,6 @@ public class HoboController : MonoBehaviour
     [SerializeField] private RectTransform rectTransform;
     private float _characterPosY;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _characterPosY = characterImage.rectTransform.anchoredPosition.y;

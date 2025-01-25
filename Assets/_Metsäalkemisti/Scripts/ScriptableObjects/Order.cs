@@ -8,4 +8,7 @@ public class Order : ScriptableObject
     public float wantedStir;
 
     public Sprite hoboSprite;
+    public Sprite ingredientsSprite;
+    public Sprite succeededSprite;
+    public Sprite failedSprite;
 }
