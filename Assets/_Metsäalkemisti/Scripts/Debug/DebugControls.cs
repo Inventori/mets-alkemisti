@@ -24,15 +24,7 @@ public class DebugControls : MonoBehaviour
         }
 
         _pontikkaSystem = pontikkaSystem;
-        
-        var heat = _pontikkaSystem.Stir;
-        
-        print(_pontikkaSystem.Stir);
-        
-        CreateButton("Increase heat", _pontikkaSystem.IncreaseHeat);
-        CreateButton("Decrease heat", _pontikkaSystem.DecreaseHeat);
-        CreateButton("Drop pressure", _pontikkaSystem.DropPressure);
-        
+        _texts.Add(CreateText());
         _texts.Add(CreateText());
         _texts.Add(CreateText());
         _texts.Add(CreateText());
@@ -43,20 +35,15 @@ public class DebugControls : MonoBehaviour
     {
          if (!_initialised) return;
          
-         var heat = _pontikkaSystem.Stir;
+         var stir = _pontikkaSystem.Stir;
          var temperature = _pontikkaSystem.Temperature;
          var pressure = _pontikkaSystem.Pressure;
-         _texts[0].text = $"Current Temperature {temperature}";
-         _texts[1].text = $"Current heat {heat}";
+         _texts[0].text = $"Current temperature {temperature}";
+         _texts[1].text = $"Current stir {stir}";
          _texts[2].text =  $"Current pressure {pressure}";
+         _texts[3].text =  $"Total progress {(_pontikkaSystem.CompletePercentage * 100):0}%";
     }
 
-
-    private void CreateButton(string text, Action callback)
-    {
-        var button = Instantiate(_buttonPrefab, _buttonContainer);
-        button.Initialize(text, callback);
-    }
     
     private TMP_Text CreateText()
     {
