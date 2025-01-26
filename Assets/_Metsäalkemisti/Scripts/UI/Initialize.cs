@@ -52,6 +52,12 @@ public class Initialize : MonoBehaviour
 
     private void StartNewRound()
     {
+        if (_currentOrder >= orders.Orders.Count)
+        {
+            GoToCompleteScene();
+            return;
+        }
+        
         orderingHobo.UpdateCharacter(orders.Orders[_currentOrder]);
         orderingHobo.MoveCharacter(spawningPoint.anchoredPosition);
         var newSeq = NewCharacterSequence();
@@ -84,6 +90,7 @@ public class Initialize : MonoBehaviour
         if(!finished)return;
         
         _currentOrder++;
+        
         var sequence = DOTween.Sequence();
         sequence.Append(CharacterLeaveSequence());
         sequence.AppendInterval(1f).OnComplete(StartNewRound);
@@ -136,5 +143,10 @@ public class Initialize : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(3);
+    }
+
+    public void GoToCompleteScene()
+    {
+        SceneManager.LoadScene(2);
     }
 }
