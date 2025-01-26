@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 931841e53057142c1933b1b75d382f84
+  - enabled: 1
     path: Assets/Scenes/Pontikkapannulla.unity
     guid: eacc30197044644cca4f64a928bae8a7
   m_configObjects:
