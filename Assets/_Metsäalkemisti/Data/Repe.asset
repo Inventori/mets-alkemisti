@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16386315a8e14794a0a7dfb6b808d52, type: 3}
   m_Name: Repe
   m_EditorClassIdentifier: 
-  wantedTemperature: 1
+  wantedTemperature: 0.99
   wantedPressure: 0.5
   wantedStir: 0.9
   hoboSprite: {fileID: 21300000, guid: dd1880ced8472428ebd9324325073f64, type: 3}
