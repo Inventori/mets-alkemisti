@@ -20,3 +20,6 @@ MonoBehaviour:
   succeededSprite: {fileID: 21300000, guid: e4690517159d841b7b4852c6c41bcbcd, type: 3}
   failedSprite: {fileID: 21300000, guid: 49da3b5a602a84e99810f234694de321, type: 3}
   flip: 1
+  voiceOverStart: task_2_1
+  voiceOverSuccess: task_2_success
+  voiceOverFail: task_2_fail
