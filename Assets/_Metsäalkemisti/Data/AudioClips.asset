@@ -15,185 +15,227 @@ MonoBehaviour:
   audioClips:
   - id: intro_1
     audioClip: {fileID: 0}
+    name: 
     subtitle: Hi and welcome to our hobo camp in woods of North Karelia, Finland.
     nextClipId: intro_2
   - id: intro_2
     audioClip: {fileID: 0}
+    name: 
     subtitle: I am forest alchemist Arska and this is my pontikkapannu!
     nextClipId: intro_3
   - id: intro_3
     audioClip: {fileID: 0}
+    name: 
     subtitle: We are having a moonshine festival today, let's help other hobos to
       prepare for the party!
     nextClipId: intro_4
   - id: intro_4
     audioClip: {fileID: 0}
+    name: 
     subtitle: My hobo friends bring me a stuff, I put stuff in my pontikkapannu and
       you help me find the perfect temperature.
     nextClipId: intro_5
   - id: intro_5
     audioClip: {fileID: 0}
+    name: 
     subtitle: Use my pontikkapannus three knobs and watch the bubbles carefully and
       remember to listen!
     nextClipId: 
   - id: bubbling_good
     audioClip: {fileID: 8300000, guid: 6f3d5336b6da840d099a6eacee705f80, type: 3}
+    name: 
     subtitle: 
     nextClipId: 
   - id: bubbling_neutral
     audioClip: {fileID: 8300000, guid: 686d6616cefb24af18b670f62e13f537, type: 3}
+    name: 
     subtitle: 
     nextClipId: 
   - id: bubbling_bad
     audioClip: {fileID: 8300000, guid: 01f758533fcf049b09c891ac2f167812, type: 3}
+    name: 
     subtitle: 
     nextClipId: 
   - id: click
     audioClip: {fileID: 8300000, guid: d0481fb1a5a654583b73136b3f57c9d5, type: 3}
+    name: 
     subtitle: 
     nextClipId: 
   - id: task_1_1
     audioClip: {fileID: 0}
+    name: Kari
     subtitle: Hi, I really want some cupcakes for the Moonshine Festival!
     nextClipId: task_1_2
   - id: task_1_2
     audioClip: {fileID: 0}
+    name: Kari
     subtitle: Can you help me? Here are some eggs and white powder and chocolate
       to get you started.
     nextClipId: 
   - id: task_1_success
     audioClip: {fileID: 0}
+    name: Kari
     subtitle: I really love your cupcakes, let's see if there is anything left for
       the party! Thanks!
     nextClipId: 
   - id: task_1_fail
     audioClip: {fileID: 0}
+    name: Kari
     subtitle: What is this ****?! Tastes horrible! You are a party pooper!
     nextClipId: 
   - id: task_2_1
     audioClip: {fileID: 0}
+    name: Pauli
     subtitle: Does the Moonsine Festival have porridge? No?
     nextClipId: task_2_2
   - id: task_2_2
     audioClip: {fileID: 0}
+    name: Pauli
     subtitle: Take my milk and oatmeal and make the hobo camp great again!
     nextClipId: 
   - id: task_2_success
     audioClip: {fileID: 0}
+    name: Pauli
     subtitle: Yammy! Now I just have to find some berries and the festival can soon
       begin!
     nextClipId: 
   - id: task_2_fail
     audioClip: {fileID: 0}
+    name: Pauli
     subtitle: '*puking*'
     nextClipId: 
   - id: task_3_1
     audioClip: {fileID: 0}
+    name: Riikka
     subtitle: My seal passed out for drinking too much moonshine.
     nextClipId: task_3_2
   - id: task_3_2
     audioClip: {fileID: 0}
+    name: Riikka
     subtitle: He really wants to join the Moonshine Festival but it seems he can't,
       right?
     nextClipId: task_3_3
   - id: task_3_3
     audioClip: {fileID: 0}
+    name: Riikka
     subtitle: Can you wake up my seal? Just put it in your Pontikkapannu and everything
       should be ok!
     nextClipId: 
   - id: task_3_success
     audioClip: {fileID: 0}
+    name: 
     subtitle: Oh boy, my seal really loves to bath in the Pontikkapannu! Maybe I
       should join him next time!
-    nextClipId: 
+    nextClipId: Riikka
   - id: task_3_fail
     audioClip: {fileID: 0}
+    name: 
     subtitle: You boiled my seal, why? You ruined my day and Moonshine Festival needs
       to be cancelled due to some funerals we will have...
-    nextClipId: 
+    nextClipId: Riikka
   - id: task_4_1
     audioClip: {fileID: 0}
+    name: Pekka
     subtitle: My underwear is so smelly. Do something!
     nextClipId: task_4_2
   - id: task_4_2
     audioClip: {fileID: 0}
+    name: Pekka
     subtitle: Can you wash my panties in your pontikkapannu?
     nextClipId: 
   - id: task_4_success
     audioClip: {fileID: 0}
+    name: Pekka
     subtitle: Warm and cozy underwear! And already so moist, perfect!
     nextClipId: 
   - id: task_4_fail
     audioClip: {fileID: 0}
+    name: Pekka
     subtitle: MY GENITALS ARE ON FIRE! HELP!
     nextClipId: 
   - id: task_5_1
     audioClip: {fileID: 0}
+    name: Repe
     subtitle: Let's not forgot what is really important here.
     nextClipId: task_5_2
   - id: task_5_2
     audioClip: {fileID: 0}
+    name: Repe
     subtitle: Here are indgredients to world famous moonshine.
     nextClipId: task_5_3
   - id: task_5_3
     audioClip: {fileID: 0}
+    name: Repe
     subtitle: Prepare it for Moonshine Festival so we can get the party started!
     nextClipId: 
   - id: task_5_success
     audioClip: {fileID: 0}
+    name: Repe
     subtitle: MOONSHINE! TO INFINITY AND BEYOND!
     nextClipId: task_5_success_2
   - id: task_5_success_2
     audioClip: {fileID: 0}
+    name: Repe
     subtitle: Thank you so much for preparing the moonshine. Your Pontikkapannu is
       truly amazing and you are a real wizard Harr.. I mean Arska!
     nextClipId: task_5_success_3
   - id: task_5_success_3
     audioClip: {fileID: 0}
+    name: Repe
     subtitle: Now let's get the Moonshine Festival started!
     nextClipId: task_5_success_3
   - id: task_5_fail
     audioClip: {fileID: 0}
+    name: Repe
     subtitle: MY EYES! I can't see *pukes*! You destroyed my Moonshine Festival and
       made me blind!
     nextClipId: 
   - id: completed_1
     audioClip: {fileID: 0}
+    name: 
     subtitle: You managed to help everyone. Every hobo in the camp was dancing and
       singing together.
     nextClipId: completed_2
   - id: completed_2
     audioClip: {fileID: 0}
+    name: 
     subtitle: 'Moonshine Festival ended up to be legen...
 
 '
     nextClipId: completed_3
   - id: completed_3
     audioClip: {fileID: 0}
+    name: 
     subtitle: Wait for it...
     nextClipId: completed_4
   - id: completed_4
     audioClip: {fileID: 0}
+    name: 
     subtitle: Dary!
     nextClipId: completed_5
   - id: completed_5
     audioClip: {fileID: 0}
+    name: 
     subtitle: Dary!
     nextClipId: completed_6
   - id: completed_5
     audioClip: {fileID: 0}
+    name: 
     subtitle: Thank you for playing <3
     nextClipId: completed_6
   - id: gameover_1
     audioClip: {fileID: 0}
+    name: 
     subtitle: You made hobos sad by failing the request. Someone kicked your pontikkapannu
       over which caused an explosion in the forest.
     nextClipId: gameover_2
   - id: gameover_2
     audioClip: {fileID: 0}
+    name: 
     subtitle: Moonshine Festical is ruined... because of you... shame...
     nextClipId: gameover_3
   - id: gameover_3
     audioClip: {fileID: 0}
+    name: 
     subtitle: Thank you for playing <3
     nextClipId: 

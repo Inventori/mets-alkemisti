@@ -32,6 +32,9 @@ public class AudioPlayback : MonoBehaviour
     [SerializeField] private GameObject subtitlePanel;
     [SerializeField] private Button proceedButton;
     [SerializeField] private TMP_Text subtitleText;
+    [SerializeField] private GameObject namePanel;
+    [SerializeField] private TMP_Text nameText;
+
 
     private List<AudioSource> _audioSourcePool = new();
 
@@ -148,6 +151,16 @@ public class AudioPlayback : MonoBehaviour
 
         _voiceOverSource.Stop();
         _voiceOverSource.PlayOneShot(_currentClip.audioClip);
+
+        if (!string.IsNullOrEmpty(_currentClip.name))
+        {
+            nameText.text = _currentClip.name;
+            namePanel.SetActive(true);
+        }
+        else
+        {
+            namePanel.SetActive(false);
+        }
         
         subtitleText.text = _currentClip.subtitle;
         subtitlePanel.SetActive(true);
