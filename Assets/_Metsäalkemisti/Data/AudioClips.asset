@@ -239,3 +239,18 @@ MonoBehaviour:
     name: Arska
     subtitle: Thank you for playing <3
     nextClipId: 
+  - id: splash
+    audioClip: {fileID: 8300000, guid: 84b587f1a9d7b4c6aa87efcf1aa6c87f, type: 3}
+    name: 
+    subtitle: 
+    nextClipId: 
+  - id: item_success
+    audioClip: {fileID: 8300000, guid: d36d655143a7d4cf0bc7e77fcde20927, type: 3}
+    name: 
+    subtitle: 
+    nextClipId: 
+  - id: item_fail
+    audioClip: {fileID: 8300000, guid: 9867f701953c8447bb26152c3fe32061, type: 3}
+    name: 
+    subtitle: 
+    nextClipId: 
