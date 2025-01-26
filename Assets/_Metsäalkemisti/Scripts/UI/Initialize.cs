@@ -12,7 +12,8 @@ public class Initialize : MonoBehaviour
     [Header("Pan control")] [SerializeField]
     private PontikkaUI pontikkaUI;
 
-    [SerializeField] private Canvas _canvas;
+    
+    [SerializeField] private AudioPlayback audioPlayback;
     [SerializeField] private HoboOrders orders;
     [SerializeField] private HoboController orderingHobo;
     [SerializeField] private RectTransform spawningPoint;
@@ -65,14 +66,22 @@ public class Initialize : MonoBehaviour
         
         if (success)
         {
-            _currentOrder++;
+            audioPlayback.PlayVoiceOver(orders.Orders[_currentOrder].voiceOverSuccess,RoundCleared);
         }
         else
         {
-            pontikkaUI.GameOver(ReloadScene);
-            return;
+            audioPlayback.PlayVoiceOver(orders.Orders[_currentOrder].voiceOverFail, b =>
+            {
+                pontikkaUI.GameOver(ReloadScene);
+            });
         }
+    }
 
+    private void RoundCleared(bool finished)
+    {
+        if(!finished)return;
+        
+        _currentOrder++;
         var sequence = DOTween.Sequence();
         sequence.Append(CharacterLeaveSequence());
         sequence.AppendInterval(1f).OnComplete(StartNewRound);
@@ -91,15 +100,19 @@ public class Initialize : MonoBehaviour
         {
             orderingHobo.ShowItem(false);
             pontikkaUI.UpdateItemInPannu(orders.Orders[_currentOrder].ingredientsSprite);
+            audioPlayback.PlayVoiceOver(orders.Orders[_currentOrder].voiceOverStart,InitNewRound);
         }));
-        sequence.AppendInterval(2.5f).OnComplete(() =>
-        {
-            _pontikkaSystem.SetNewGoal(orders.Orders[_currentOrder]);
-            _pontikkaSystem.StartNewRound();
-            pontikkaUI.SetBubbles();
-        });
-
+        
         return sequence;
+    }
+
+    private void InitNewRound(bool finished)
+    {
+        if (!finished) return;
+        
+        _pontikkaSystem.SetNewGoal(orders.Orders[_currentOrder]);
+        _pontikkaSystem.StartNewRound();
+        pontikkaUI.SetBubbles();
     }
 
     private Sequence CharacterLeaveSequence()
@@ -119,6 +132,6 @@ public class Initialize : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 }

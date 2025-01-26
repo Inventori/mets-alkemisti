@@ -13,4 +13,9 @@ public class Order : ScriptableObject
     public Sprite failedSprite;
 
     public bool flip;
+
+    public string voiceOverStart;
+    public string voiceOverSuccess;
+    public string voiceOverFail;
+    
 }

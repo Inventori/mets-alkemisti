@@ -19,3 +19,7 @@ MonoBehaviour:
   ingredientsSprite: {fileID: 21300000, guid: 4b348d83c1c7842a0952d7c0e65c2452, type: 3}
   succeededSprite: {fileID: 21300000, guid: a583548e475ec4b3e8130fb3a2c27636, type: 3}
   failedSprite: {fileID: 21300000, guid: 422f803c87f7a4c88a81204b11dfda22, type: 3}
+  flip: 0
+  voiceOverStart: task_1_1
+  voiceOverSuccess: task_1_success
+  voiceOverFail: task_1_fail
