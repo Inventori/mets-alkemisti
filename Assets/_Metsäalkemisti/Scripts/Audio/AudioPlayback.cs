@@ -22,21 +22,23 @@ public class AudioPlayback : MonoBehaviour
     public AudioMixerGroup musicMixerGroup;
 
     [SerializeField] private AudioClip ambientClip;
-    
+
+    [SerializeField] private Song automaticallyPlaySong;
     [SerializeField] private AudioClip introMusic;
     [SerializeField] private AudioClip inGameMusic;
     [SerializeField] private AudioClip gameOverMusic;
     [SerializeField] private AudioClip gameCompletedMusic;
 
+    [SerializeField] private GameObject subtitlePanel;
     [SerializeField] private Button proceedButton;
     [SerializeField] private TMP_Text subtitleText;
 
     private List<AudioSource> _audioSourcePool = new();
 
     private AudioClipData _currentClip;
-    private Action _onClipFinished;
+    private Action<bool> _onClipFinished;
 
-    private void Start()
+    private void Awake()
     {
         for (var i = 0; i < audioSourcePoolSize; i++)
         {
@@ -55,6 +57,9 @@ public class AudioPlayback : MonoBehaviour
 
         _musicSource = Instantiate(audioSourcePrefab, transform);
         _musicSource.outputAudioMixerGroup = musicMixerGroup;
+        _musicSource.loop = true;
+        
+        PlaySong(automaticallyPlaySong);
     }
 
     private void OnEnable()
@@ -66,13 +71,32 @@ public class AudioPlayback : MonoBehaviour
     {
         proceedButton.onClick.RemoveListener(OnProceedClicked);
     }
-
+    
     private void PlayAmbient()
     {
         _ambientSource.clip = ambientClip;
         _ambientSource.Play();
     }
 
+    public void PlaySong(Song song) 
+    {
+        switch (song)
+        {
+            case Song.Intro:
+                PlayIntroMusic();
+                break;
+            case Song.InGame:
+                PlayInGameMusic();
+                break;
+            case Song.GameOver:
+                PlayGameOverMusic();
+                break;
+            case Song.GameCompleted:
+                PlayGameCompletedMusic();
+                break;
+        }
+    }
+    
     public void PlayIntroMusic()
     {
         _musicSource.clip = introMusic;
@@ -106,14 +130,21 @@ public class AudioPlayback : MonoBehaviour
             return;
         }
 
-        var source = GetAudioSource();
-        source.PlayOneShot(_currentClip.audioClip);
+        if(_currentClip.audioClip != null)
+        {
+            var source = GetAudioSource();
+            source.PlayOneShot(_currentClip.audioClip);
+        }
     }
 
-    public void PlayVoiceOver(string id, Action onClipFinished = null)
+    public void PlayVoiceOver(string id, Action<bool> onClipFinished = null)
     {
         _currentClip = audioClipsSO.GetClip(id);
-        _onClipFinished = onClipFinished;
+        if(onClipFinished != null)
+        {
+            _onClipFinished = onClipFinished;
+            Debug.LogWarning("asd");
+        }
 
         if (_currentClip == null)
         {
@@ -123,8 +154,9 @@ public class AudioPlayback : MonoBehaviour
 
         _voiceOverSource.Stop();
         _voiceOverSource.PlayOneShot(_currentClip.audioClip);
-
+        
         subtitleText.text = _currentClip.subtitle;
+        subtitlePanel.SetActive(true);
     }
 
     private AudioSource GetAudioSource()
@@ -136,7 +168,7 @@ public class AudioPlayback : MonoBehaviour
     {
         if (_currentClip == null)
         {
-            VoiceOverFinished();
+            VoiceOverFinished(true);
             return;
         }
 
@@ -145,17 +177,31 @@ public class AudioPlayback : MonoBehaviour
         if (!string.IsNullOrEmpty(_currentClip.nextClipId))
         {
             PlayVoiceOver(_currentClip.nextClipId);
+            VoiceOverFinished(false);
         }
         else
         {
-            VoiceOverFinished();
+            VoiceOverFinished(true);
         }
     }
 
-    private void VoiceOverFinished()
+    private void VoiceOverFinished(bool finished)
     {
-        _onClipFinished?.Invoke();
-        _currentClip = null;
-        _onClipFinished = null;
+        _onClipFinished?.Invoke(finished);
+        if(finished)
+        {
+            _currentClip = null;
+            _onClipFinished = null;
+            subtitlePanel.SetActive(false);
+        }
     }
+}
+
+public enum Song
+{
+    None,
+    Intro,
+    InGame,
+    GameOver,
+    GameCompleted
 }

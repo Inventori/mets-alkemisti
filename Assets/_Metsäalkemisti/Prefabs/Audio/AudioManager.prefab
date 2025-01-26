@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2277734541099548811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6475981708532645159}
+  - component: {fileID: 250704197972542175}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6475981708532645159
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277734541099548811}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5130239, y: -1.7783129, z: -0.09416173}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &250704197972542175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277734541099548811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8e921a23dee41bb9aafb4f9cdb5563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipsSO: {fileID: 11400000, guid: 6e4d86a5832024d82bce108687c8dfc6, type: 2}
+  audioSourcePrefab: {fileID: 7808159242309817666, guid: 69945d58eca504608ba379c61ff2ebd8, type: 3}
+  audioSourcePoolSize: 10
+  ambientMixerGroup: {fileID: 4558472994142810354, guid: fa686093e374845aa89067959ea32b6a, type: 2}
+  voiceOverixerGroup: {fileID: -5975653951248840431, guid: fa686093e374845aa89067959ea32b6a, type: 2}
+  sfxMixerGroup: {fileID: 6561478130507888233, guid: fa686093e374845aa89067959ea32b6a, type: 2}
+  musicMixerGroup: {fileID: 8639536729000345652, guid: fa686093e374845aa89067959ea32b6a, type: 2}
+  ambientClip: {fileID: 8300000, guid: cf3b30207eb704b9faab996f08224d65, type: 3}
+  introMusic: {fileID: 8300000, guid: 24198b96e3f41459ebc9d730e7d660fe, type: 3}
+  inGameMusic: {fileID: 8300000, guid: 9b7973ddf05904ccd96facc362f7422c, type: 3}
+  gameOverMusic: {fileID: 8300000, guid: 26206db3f1cb54135ba18ffd9a8b3555, type: 3}
+  gameCompletedMusic: {fileID: 8300000, guid: ef885bd4a9a2040b2b219d046a09f01d, type: 3}
+  proceedButton: {fileID: 0}
+  subtitleText: {fileID: 0}
