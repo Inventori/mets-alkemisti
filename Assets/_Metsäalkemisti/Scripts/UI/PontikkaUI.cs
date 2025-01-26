@@ -36,7 +36,6 @@ public class PontikkaUI : MonoBehaviour
     {
         _pontikkaSystem.AdjustStir(value);
         SetBubbles();
-
     }
     
     public void HideBubbles()
@@ -47,6 +46,11 @@ public class PontikkaUI : MonoBehaviour
     
     public void SetBubbles()
     {
+        if (!_pontikkaSystem.Running)
+        {
+            return;
+        }
+        
         var emission = bubbles.emission;
        var goal = _pontikkaSystem.CalculateOrderScore();
 
@@ -57,11 +61,15 @@ public class PontikkaUI : MonoBehaviour
        }
        else if (goal > .6)
        {
-           rateMulti = 1.5f;
+           rateMulti = 1.25f;
        }
        else if (goal > .4)
        {
-           rateMulti = 1.25f;
+           rateMulti = 0.75f;
+       }
+       else
+       {
+           rateMulti = .5f;
        }
        
        emission.rateOverTime = goal * 100 * rateMulti;

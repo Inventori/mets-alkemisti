@@ -11,7 +11,7 @@ public class HoboController : MonoBehaviour
     private Vector3 _hoboItemPosition;
     private Order _currentHoboOrder;
     
-    public RectTransform RectTransform { get { return rectTransform; } }
+    public RectTransform RectTransform { get { return characterImage.rectTransform; } }
     public RectTransform ParentRectTransform { get { return rectTransform.parent.GetComponent<RectTransform>(); } }
     
     void Start()
@@ -54,7 +54,7 @@ public class HoboController : MonoBehaviour
     public Sequence MoveItem(Vector3 position)
     {
         var sequence = DOTween.Sequence();
-        sequence.Append(hoboItem.rectTransform.DOJumpAnchorPos(position, 20f,1,1f));
+        sequence.Append(hoboItem.rectTransform.DOJumpAnchorPos(position, 100f,1,1f));
         return sequence;
     }
 

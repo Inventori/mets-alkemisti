@@ -19,11 +19,14 @@ public class PontikkaSystem
     private int _timer;
     private bool _running;
     
+    
+    
     public float Temperature => _temperature;
     public float Pressure => _pressure;
     public float Stir => _stir;
     public float CompletePercentage => _completePercentage;
     public int Timer => _timer;
+    public bool Running => _running;
 
     private Order currentOrder;
     public Action<bool> OnRoundEnd;
