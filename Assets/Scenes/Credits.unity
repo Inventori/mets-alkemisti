@@ -342,6 +342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 3211687696145962062, guid: 0679fe52c80734dd994ad1e4bae9f989, type: 3}
+      propertyPath: automaticallyPlaySong
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6388338441032706411, guid: 0679fe52c80734dd994ad1e4bae9f989, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
