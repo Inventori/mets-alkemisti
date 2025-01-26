@@ -183,7 +183,7 @@ MonoBehaviour:
     audioClip: {fileID: 0}
     name: Repe
     subtitle: Now let's get the Moonshine Festival started!
-    nextClipId: task_5_success_3
+    nextClipId: 
   - id: task_5_fail
     audioClip: {fileID: 0}
     name: Repe
