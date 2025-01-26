@@ -117,6 +117,7 @@ public class PontikkaSystem
         var success = CalculateOrderScore() > .5f;
         OnRoundEnd?.Invoke(success);
         audioPlayback.PlayBubbles(0);
+        bubbleInt = 0;
     }
     
     private void PontikkaGoBoom()

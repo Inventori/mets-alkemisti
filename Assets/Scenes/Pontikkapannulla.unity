@@ -5248,7 +5248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58770a69bf09e4c9c90015dd4eaf0a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _debug: 1
+  _debug: 0
   _debugControls: {fileID: 7479439981461554727}
   pontikkaUI: {fileID: 1370202051}
   audioPlayback: {fileID: 875110899}
