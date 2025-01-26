@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UI.Extensions;
@@ -9,6 +10,8 @@ public class PontikkaUI : MonoBehaviour
     [SerializeField] private UI_Knob stirValve;
     [SerializeField] private ParticleSystem bubbles;
     [SerializeField] private Image itemInPannu;
+    
+    [SerializeField] private CanvasGroup gameOver;
 
     private PontikkaSystem _pontikkaSystem;
     public void Initialize(PontikkaSystem pontikkaSystem)
@@ -19,6 +22,7 @@ public class PontikkaUI : MonoBehaviour
         stirValve.OnValueChanged.AddListener(StirChanged);
         HideItemInPannu();
         HideBubbles();
+        gameOver.gameObject.SetActive(false);
     }
 
     private void TemperatureChanged(float value)
@@ -43,6 +47,12 @@ public class PontikkaUI : MonoBehaviour
         var emission = bubbles.emission;    
         emission.rateOverTime = 0;
     }
+
+    public void GameOver()
+    {
+        gameOver.gameObject.SetActive(true);
+        gameOver.DOFade(1, 0.5f);
+    }
     
     public void SetBubbles()
     {
@@ -59,11 +69,11 @@ public class PontikkaUI : MonoBehaviour
        {
            rateMulti = 2;
        }
-       else if (goal > .6)
+       else if (goal > .5)
        {
            rateMulti = 1.25f;
        }
-       else if (goal > .4)
+       else if (goal > .25)
        {
            rateMulti = 0.75f;
        }
