@@ -126,13 +126,13 @@ MonoBehaviour:
     name: Riikka
     subtitle: Oh boy, my seal really loves to bath in the Pontikkapannu! Maybe I
       should join him next time!
-    nextClipId: Riikka
+    nextClipId: 
   - id: task_3_fail
     audioClip: {fileID: 0}
-    name: 
+    name: Riikka
     subtitle: You boiled my seal, why? You ruined my day and Moonshine Festival needs
       to be cancelled due to some funerals we will have...
-    nextClipId: Riikka
+    nextClipId: 
   - id: task_4_1
     audioClip: {fileID: 0}
     name: Pekka
