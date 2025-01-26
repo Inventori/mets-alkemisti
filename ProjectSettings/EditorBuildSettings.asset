@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pontikkapannulla.unity
     guid: eacc30197044644cca4f64a928bae8a7
+  - enabled: 1
+    path: Assets/Scenes/GameCompleted.unity
+    guid: 5f7f65199ff3e410ca0d88ee3ad10335
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

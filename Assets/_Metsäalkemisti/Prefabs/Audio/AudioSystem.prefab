@@ -53,6 +53,10 @@ PrefabInstance:
       propertyPath: subtitlePanel
       value: 
       objectReference: {fileID: 6909775453046244145}
+    - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
+      propertyPath: automaticallyPlaySong
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2277734541099548811, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -115,6 +119,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6388338441032706411}
     m_Modifications:
+    - target: {fileID: 404444949703870321, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 404444949703870321, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -8
+      objectReference: {fileID: 0}
     - target: {fileID: 5803807486696892508, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
       propertyPath: m_Name
       value: VOCanvas
@@ -198,6 +210,10 @@ PrefabInstance:
     - target: {fileID: 6327016872787198493, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744665919764144591, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
