@@ -14,29 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - id: intro_1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 5929de93954f148d8a00881b13a9e4e0, type: 3}
     name: Arska
     subtitle: Hi and welcome to our hobo camp in woods of North Karelia, Finland.
     nextClipId: intro_2
   - id: intro_2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 6f9a1513900f74f1a97fc3a7c855a2cb, type: 3}
     name: Arska
     subtitle: I am forest alchemist Arska and this is my pontikkapannu!
     nextClipId: intro_3
   - id: intro_3
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 6fae24966057d45eea425af4dcca71a6, type: 3}
     name: Arska
     subtitle: We are having a moonshine festival today, let's help other hobos to
       prepare for the party!
     nextClipId: intro_4
   - id: intro_4
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 4a57a4c5bd7de41db953076d0440b1a9, type: 3}
     name: Arska
     subtitle: My hobo friends bring me a stuff, I put stuff in my pontikkapannu and
       you help me find the perfect temperature.
     nextClipId: intro_5
   - id: intro_5
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 161d889b5ef28472297327c6f477c9b7, type: 3}
     name: Arska
     subtitle: Use my pontikkapannus three knobs and watch the bubbles carefully and
       remember to listen!
@@ -191,51 +191,51 @@ MonoBehaviour:
       made me blind!
     nextClipId: 
   - id: completed_1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 161d889b5ef28472297327c6f477c9b7, type: 3}
     name: Arska
     subtitle: You managed to help everyone. Every hobo in the camp was dancing and
       singing together.
     nextClipId: completed_2
   - id: completed_2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 8156b21aec4c746aca89f268559d77c9, type: 3}
     name: Arska
     subtitle: 'Moonshine Festival ended up to be legen...
 
 '
     nextClipId: completed_3
   - id: completed_3
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 6fae24966057d45eea425af4dcca71a6, type: 3}
     name: Arska
     subtitle: Wait for it...
     nextClipId: completed_4
   - id: completed_4
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 5929de93954f148d8a00881b13a9e4e0, type: 3}
     name: Arska
     subtitle: Dary!
     nextClipId: completed_5
   - id: completed_5
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 6f9a1513900f74f1a97fc3a7c855a2cb, type: 3}
     name: Arska
     subtitle: Dary!
     nextClipId: completed_6
-  - id: completed_5
-    audioClip: {fileID: 0}
+  - id: completed_6
+    audioClip: {fileID: 8300000, guid: 6993177a018c74008a596af9fa48236b, type: 3}
     name: Arska
     subtitle: Thank you for playing <3
-    nextClipId: completed_6
+    nextClipId: 
   - id: gameover_1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 855d4b61af04f4c43a6e51cfc51c052f, type: 3}
     name: Arska
     subtitle: You made hobos sad by failing the request. Someone kicked your pontikkapannu
       over which caused an explosion in the forest.
     nextClipId: gameover_2
   - id: gameover_2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: b20a47494da3648219065e056a15dfbc, type: 3}
     name: Arska
     subtitle: Moonshine Festical is ruined... because of you... shame...
     nextClipId: gameover_3
   - id: gameover_3
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 4a57a4c5bd7de41db953076d0440b1a9, type: 3}
     name: Arska
     subtitle: Thank you for playing <3
     nextClipId: 
