@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b16386315a8e14794a0a7dfb6b808d52, type: 3}
-  m_Name: Pekka
+  m_Name: Pauli
   m_EditorClassIdentifier: 
   wantedTemperature: 0.5
   wantedPressure: 0.3
   wantedStir: 0.7
-  hoboSprite: {fileID: 21300000, guid: a373d2774259a40e08f82cae40d0c092, type: 3}
-  ingredientsSprite: {fileID: 21300000, guid: 04fdaf9b2667f44bfb505153abdff2e3, type: 3}
-  succeededSprite: {fileID: 21300000, guid: 5f577e2a7cbf84d3ea42c7e091a22573, type: 3}
-  failedSprite: {fileID: 21300000, guid: 7de38fcefe67543429ded378c2b062d1, type: 3}
+  hoboSprite: {fileID: 21300000, guid: 677a506b2364648f39f3cf5b9c3b46da, type: 3}
+  ingredientsSprite: {fileID: 21300000, guid: 55583f5349a1b48af96eb5d3890db521, type: 3}
+  succeededSprite: {fileID: 21300000, guid: e4690517159d841b7b4852c6c41bcbcd, type: 3}
+  failedSprite: {fileID: 21300000, guid: 49da3b5a602a84e99810f234694de321, type: 3}

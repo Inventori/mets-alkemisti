@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: a9903c1aa318d4677bcaa44be3f725c4
+guid: 55583f5349a1b48af96eb5d3890db521
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1662843352530915255
-    second: char6_0
+      213: -5895345996942767567
+    second: cupcake_ingredients_0
+  - first:
+      213: 4437471423883969232
+    second: cupcake_ingredients_1
+  - first:
+      213: -5505912716057502646
+    second: cupcake_ingredients_2
+  - first:
+      213: -8645766160258621422
+    second: cupcake_ingredients_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char6_0
+      name: cupcake_ingredients_0
       rect:
         serializedVersion: 2
-        x: 104
-        y: 91
-        width: 757
-        height: 3140
+        x: 143
+        y: 1341
+        width: 9
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 940764fe7c46ce8e0800000000000000
-      internalID: -1662843352530915255
+      spriteID: 13a8438fc068f2ea0800000000000000
+      internalID: -5895345996942767567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cupcake_ingredients_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 901
+        width: 1039
+        height: 1301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d20d81dfb0159d30800000000000000
+      internalID: 4437471423883969232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cupcake_ingredients_2
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 1200
+        width: 1397
+        height: 970
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c161b6e811793b0800000000000000
+      internalID: -5505912716057502646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cupcake_ingredients_3
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 252
+        width: 1289
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21021b60c71140880800000000000000
+      internalID: -8645766160258621422
       vertices: []
       indices: 
       edges: []
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      char6_0: -1662843352530915255
+      cupcake_ingredients_0: -5895345996942767567
+      cupcake_ingredients_1: 4437471423883969232
+      cupcake_ingredients_2: -5505912716057502646
+      cupcake_ingredients_3: -8645766160258621422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
