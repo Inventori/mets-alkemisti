@@ -10,6 +10,8 @@ public class PontikkaSystem
         Okay,
         Poor
     }
+
+    private const int RoundTimer = 30;
     
     private float _temperature;
     private float _pressure;
@@ -84,7 +86,7 @@ public class PontikkaSystem
 
     public void StartNewRound()
     {
-        _timer = 20;
+        _timer = RoundTimer;
         _running = true;
     }
 

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Initialize : MonoBehaviour
@@ -11,6 +12,7 @@ public class Initialize : MonoBehaviour
     [Header("Pan control")] [SerializeField]
     private PontikkaUI pontikkaUI;
 
+    [SerializeField] private Canvas _canvas;
     [SerializeField] private HoboOrders orders;
     [SerializeField] private HoboController orderingHobo;
     [SerializeField] private RectTransform spawningPoint;
@@ -67,7 +69,8 @@ public class Initialize : MonoBehaviour
         }
         else
         {
-            //RAIVO!
+            pontikkaUI.GameOver();
+            return;
         }
 
         var sequence = DOTween.Sequence();
@@ -112,5 +115,10 @@ public class Initialize : MonoBehaviour
         sequence.Append(orderingHobo.MoveHoboTo(despawningPoint.anchoredPosition.x, 6f));
         sequence.AppendInterval(2.5f);
         return sequence;
+    }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
