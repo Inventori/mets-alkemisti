@@ -164,7 +164,13 @@ public class AudioPlayback : MonoBehaviour
         }
 
         _voiceOverSource.Stop();
-        _voiceOverSource.PlayOneShot(_currentClip.audioClip);
+        if (_currentClip.audioClip == null)
+        {
+            _voiceOverSource.PlayOneShot(audioClipsSO.GetFallbackVO());
+        } else
+        {
+            _voiceOverSource.PlayOneShot(_currentClip.audioClip);
+        }
 
         if (!string.IsNullOrEmpty(_currentClip.name))
         {

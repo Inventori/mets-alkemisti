@@ -254,3 +254,22 @@ MonoBehaviour:
     name: 
     subtitle: 
     nextClipId: 
+  fallbackVOs:
+  - {fileID: 8300000, guid: 6fae24966057d45eea425af4dcca71a6, type: 3}
+  - {fileID: 8300000, guid: 5929de93954f148d8a00881b13a9e4e0, type: 3}
+  - {fileID: 8300000, guid: 161d889b5ef28472297327c6f477c9b7, type: 3}
+  - {fileID: 8300000, guid: 6f9a1513900f74f1a97fc3a7c855a2cb, type: 3}
+  - {fileID: 8300000, guid: 6993177a018c74008a596af9fa48236b, type: 3}
+  - {fileID: 8300000, guid: b20a47494da3648219065e056a15dfbc, type: 3}
+  - {fileID: 8300000, guid: 855d4b61af04f4c43a6e51cfc51c052f, type: 3}
+  - {fileID: 8300000, guid: 4a57a4c5bd7de41db953076d0440b1a9, type: 3}
+  - {fileID: 8300000, guid: 8156b21aec4c746aca89f268559d77c9, type: 3}
+  - {fileID: 8300000, guid: 916f186c9353f4608b1ff8a92d539a73, type: 3}
+  - {fileID: 8300000, guid: c9b03444404a54d5f905c5e59d281566, type: 3}
+  - {fileID: 8300000, guid: f2ad683c568fa4826b77d286a1387cbb, type: 3}
+  - {fileID: 8300000, guid: df02c469f7d944a8f83c5c9a13e73b67, type: 3}
+  - {fileID: 8300000, guid: 0ac0fe6c95ed24c0fb62789a3f3eaca3, type: 3}
+  - {fileID: 8300000, guid: bca15d7f84e1f4b37a3ee32244495c6c, type: 3}
+  - {fileID: 8300000, guid: 6ac56a1d2945948f68581cd1d700e3ea, type: 3}
+  - {fileID: 8300000, guid: a24932b424b934a0a910462ae4f20398, type: 3}
+  - {fileID: 8300000, guid: 7ad6407b6945b4ca09536c8591260c03, type: 3}

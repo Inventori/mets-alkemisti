@@ -7,9 +7,16 @@ using UnityEngine.Serialization;
 public class AudioClipsSO : ScriptableObject
 {
     public List<AudioClipData> audioClips = new();
+    public List<AudioClip> fallbackVOs = new();
+    
     
     public AudioClipData GetClip(string id)
     {
         return audioClips.FirstOrDefault(x => x.id == id);
+    }
+    
+    public AudioClip GetFallbackVO()
+    {
+        return fallbackVOs[Random.Range(0, fallbackVOs.Count)];
     }
 }
