@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Pauli
   m_EditorClassIdentifier: 
   wantedTemperature: 0.5
-  wantedPressure: 0.3
-  wantedStir: 0.7
+  wantedPressure: 0.5
+  wantedStir: 0.5
   hoboSprite: {fileID: 21300000, guid: 677a506b2364648f39f3cf5b9c3b46da, type: 3}
   ingredientsSprite: {fileID: 21300000, guid: 55583f5349a1b48af96eb5d3890db521, type: 3}
   succeededSprite: {fileID: 21300000, guid: e4690517159d841b7b4852c6c41bcbcd, type: 3}
   failedSprite: {fileID: 21300000, guid: 49da3b5a602a84e99810f234694de321, type: 3}
   flip: 1
-  voiceOverStart: task_2_1
-  voiceOverSuccess: task_2_success
-  voiceOverFail: task_2_fail
+  voiceOverStart: task_1_1
+  voiceOverSuccess: task_1_success
+  voiceOverFail: task_1_fail

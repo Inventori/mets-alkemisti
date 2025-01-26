@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16386315a8e14794a0a7dfb6b808d52, type: 3}
   m_Name: Riikka
   m_EditorClassIdentifier: 
-  wantedTemperature: 0.5
+  wantedTemperature: 0.2
   wantedPressure: 0.3
-  wantedStir: 0.7
+  wantedStir: 0.1
   hoboSprite: {fileID: 21300000, guid: d969049e7c8924414b8798176aa7e851, type: 3}
   ingredientsSprite: {fileID: 21300000, guid: dc9c4ef61d5ec410ab5f2883d1e0a7ff, type: 3}
   succeededSprite: {fileID: 21300000, guid: 3d345661c6c4740c9b45831592039acd, type: 3}

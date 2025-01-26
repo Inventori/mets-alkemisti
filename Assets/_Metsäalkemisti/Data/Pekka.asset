@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Pekka
   m_EditorClassIdentifier: 
   wantedTemperature: 0.5
-  wantedPressure: 0.3
-  wantedStir: 0.7
+  wantedPressure: 0.9
+  wantedStir: 0
   hoboSprite: {fileID: 21300000, guid: a373d2774259a40e08f82cae40d0c092, type: 3}
   ingredientsSprite: {fileID: 21300000, guid: 04fdaf9b2667f44bfb505153abdff2e3, type: 3}
   succeededSprite: {fileID: 21300000, guid: 5f577e2a7cbf84d3ea42c7e091a22573, type: 3}
   failedSprite: {fileID: 21300000, guid: 7de38fcefe67543429ded378c2b062d1, type: 3}
   flip: 0
-  voiceOverStart: task_4_1
-  voiceOverSuccess: task_4_success
-  voiceOverFail: task_4_fail
+  voiceOverStart: task_5_1
+  voiceOverSuccess: task_5_success
+  voiceOverFail: task_5_fail
