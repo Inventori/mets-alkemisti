@@ -11,4 +11,6 @@ public class Order : ScriptableObject
     public Sprite ingredientsSprite;
     public Sprite succeededSprite;
     public Sprite failedSprite;
+
+    public bool flip;
 }

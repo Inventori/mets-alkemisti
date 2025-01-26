@@ -96,7 +96,7 @@ public class PontikkaSystem
     }
 
 
-    private float CalculateOrderScore()
+    public float CalculateOrderScore()
     {
         // Calculate absolute differences
         float temperatureDiff = Mathf.Abs(currentOrder.wantedTemperature - _temperature);

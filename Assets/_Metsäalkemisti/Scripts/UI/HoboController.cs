@@ -6,11 +6,18 @@ public class HoboController : MonoBehaviour
 {
     [SerializeField] private Image characterImage;
     [SerializeField] private RectTransform rectTransform;
+    [SerializeField] private Image hoboItem;
     private float _characterPosY;
+    private Vector3 _hoboItemPosition;
+    private Order _currentHoboOrder;
+    
+    public RectTransform RectTransform { get { return rectTransform; } }
+    public RectTransform ParentRectTransform { get { return rectTransform.parent.GetComponent<RectTransform>(); } }
     
     void Start()
     {
         _characterPosY = characterImage.rectTransform.anchoredPosition.y;
+        _hoboItemPosition = hoboItem.rectTransform.anchoredPosition;
     }
     
     public void Walking()
@@ -44,8 +51,61 @@ public class HoboController : MonoBehaviour
         rectTransform.anchoredPosition = new Vector3(position.x, rectTransform.anchoredPosition.y, 0);
     }
 
+    public Sequence MoveItem(Vector3 position)
+    {
+        var sequence = DOTween.Sequence();
+        sequence.Append(hoboItem.rectTransform.DOJumpAnchorPos(position, 20f,1,1f));
+        return sequence;
+    }
+
+    public Sequence MoveItemToHobo()
+    {
+        var sequence = MoveItem(_hoboItemPosition);
+        return sequence;
+    }
+
+    
+    public void SetItemParent(RectTransform parent)
+    {
+        hoboItem.rectTransform.SetParent(parent);
+    }
+    
+    public void ResetPosition()
+    {
+        rectTransform.anchoredPosition = _hoboItemPosition;
+    }
     public void UpdateCharacter(Order order)
     {
+        _currentHoboOrder = order;
         characterImage.sprite = order.hoboSprite;
+        if (_currentHoboOrder.flip)
+        {
+            if (characterImage.rectTransform.localScale.x > 0)
+            {
+                var scale = characterImage.rectTransform.localScale;
+                scale.x *= -1;
+                characterImage.rectTransform.localScale = scale;
+            }
+        }
+        else
+        {
+            if (characterImage.rectTransform.localScale.x < 0)
+            {
+                var scale = characterImage.rectTransform.localScale;
+                scale.x *= -1;
+                characterImage.rectTransform.localScale = scale;
+            }
+        }
+        hoboItem.sprite = order.ingredientsSprite;
+    }
+
+    public void UpdateItem(bool success)
+    {
+        hoboItem.sprite = success ? _currentHoboOrder.succeededSprite : _currentHoboOrder.failedSprite;
+    }
+
+    public void ShowItem(bool show)
+    {
+        hoboItem.gameObject.SetActive(show);
     }
 }

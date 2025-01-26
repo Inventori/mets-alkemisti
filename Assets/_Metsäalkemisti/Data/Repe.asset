@@ -19,3 +19,4 @@ MonoBehaviour:
   ingredientsSprite: {fileID: 21300000, guid: 34073ac43b6cb44acacb94b21a99e995, type: 3}
   succeededSprite: {fileID: 21300000, guid: 23156d5593b654d27a52b529ce48ee74, type: 3}
   failedSprite: {fileID: 21300000, guid: 501d574d3bcac4f4f8213e0d45418d03, type: 3}
+  flip: 1
