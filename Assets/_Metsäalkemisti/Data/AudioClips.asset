@@ -62,24 +62,24 @@ MonoBehaviour:
     subtitle: 
     nextClipId: 
   - id: task_1_1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 916f186c9353f4608b1ff8a92d539a73, type: 3}
     name: Kari
     subtitle: Hi, I really want some cupcakes for the Moonshine Festival!
     nextClipId: task_1_2
   - id: task_1_2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: c9b03444404a54d5f905c5e59d281566, type: 3}
     name: Kari
     subtitle: Can you help me? Here are some eggs and white powder and chocolate
       to get you started.
     nextClipId: 
   - id: task_1_success
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: f2ad683c568fa4826b77d286a1387cbb, type: 3}
     name: Kari
     subtitle: I really love your cupcakes, let's see if there is anything left for
       the party! Thanks!
     nextClipId: 
   - id: task_1_fail
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: df02c469f7d944a8f83c5c9a13e73b67, type: 3}
     name: Kari
     subtitle: What is this ****?! Tastes horrible! You are a party pooper!
     nextClipId: 
@@ -105,30 +105,30 @@ MonoBehaviour:
     subtitle: '*puking*'
     nextClipId: 
   - id: task_3_1
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 0ac0fe6c95ed24c0fb62789a3f3eaca3, type: 3}
     name: Riikka
     subtitle: My seal passed out for drinking too much moonshine.
     nextClipId: task_3_2
   - id: task_3_2
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: bca15d7f84e1f4b37a3ee32244495c6c, type: 3}
     name: Riikka
     subtitle: He really wants to join the Moonshine Festival but it seems he can't,
       right?
     nextClipId: task_3_3
   - id: task_3_3
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 6ac56a1d2945948f68581cd1d700e3ea, type: 3}
     name: Riikka
     subtitle: Can you wake up my seal? Just put it in your Pontikkapannu and everything
       should be ok!
     nextClipId: 
   - id: task_3_success
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: a24932b424b934a0a910462ae4f20398, type: 3}
     name: Riikka
     subtitle: Oh boy, my seal really loves to bath in the Pontikkapannu! Maybe I
       should join him next time!
     nextClipId: 
   - id: task_3_fail
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 7ad6407b6945b4ca09536c8591260c03, type: 3}
     name: Riikka
     subtitle: You boiled my seal, why? You ruined my day and Moonshine Festival needs
       to be cancelled due to some funerals we will have...
