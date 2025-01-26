@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,10 +49,11 @@ public class PontikkaUI : MonoBehaviour
         emission.rateOverTime = 0;
     }
 
-    public void GameOver()
+    
+    public void GameOver(Action callback)
     {
         gameOver.gameObject.SetActive(true);
-        gameOver.DOFade(1, 0.5f);
+        gameOver.DOFade(1, 4f).OnComplete(callback.Invoke);
     }
     
     public void SetBubbles()

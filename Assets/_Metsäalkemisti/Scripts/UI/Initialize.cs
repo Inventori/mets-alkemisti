@@ -69,7 +69,7 @@ public class Initialize : MonoBehaviour
         }
         else
         {
-            pontikkaUI.GameOver();
+            pontikkaUI.GameOver(ReloadScene);
             return;
         }
 
@@ -119,6 +119,6 @@ public class Initialize : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(4);
     }
 }
