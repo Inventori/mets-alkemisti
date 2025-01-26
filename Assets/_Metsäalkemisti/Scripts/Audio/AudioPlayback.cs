@@ -123,14 +123,9 @@ public class AudioPlayback : MonoBehaviour
     
     public void PlaySfx(string id)
     {
-        _currentClip = audioClipsSO.GetClip(id);
-        if (_currentClip == null)
-        {
-            Debug.LogWarning($"Clip with id {id} not found");
-            return;
-        }
-
-        if(_currentClip.audioClip != null)
+        var clip = audioClipsSO.GetClip(id);
+       
+        if(clip != null && clip.audioClip != null)
         {
             var source = GetAudioSource();
             source.PlayOneShot(_currentClip.audioClip);
@@ -143,7 +138,6 @@ public class AudioPlayback : MonoBehaviour
         if(onClipFinished != null)
         {
             _onClipFinished = onClipFinished;
-            Debug.LogWarning("asd");
         }
 
         if (_currentClip == null)
@@ -166,6 +160,7 @@ public class AudioPlayback : MonoBehaviour
 
     private void OnProceedClicked()
     {
+        PlaySfx("click");
         if (_currentClip == null)
         {
             VoiceOverFinished(true);

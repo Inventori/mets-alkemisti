@@ -36,3 +36,19 @@ MonoBehaviour:
     subtitle: Use my pontikkapannus three knobs and watch the bubbles carefully and
       remember to listen!
     nextClipId: 
+  - id: bubbling_good
+    audioClip: {fileID: 8300000, guid: 6f3d5336b6da840d099a6eacee705f80, type: 3}
+    subtitle: 
+    nextClipId: 
+  - id: bubbling_neutral
+    audioClip: {fileID: 8300000, guid: 686d6616cefb24af18b670f62e13f537, type: 3}
+    subtitle: 
+    nextClipId: 
+  - id: bubbling_bad
+    audioClip: {fileID: 8300000, guid: 01f758533fcf049b09c891ac2f167812, type: 3}
+    subtitle: 
+    nextClipId: 
+  - id: click
+    audioClip: {fileID: 8300000, guid: d0481fb1a5a654583b73136b3f57c9d5, type: 3}
+    subtitle: 
+    nextClipId: 
