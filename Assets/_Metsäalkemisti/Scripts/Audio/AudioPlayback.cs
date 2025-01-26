@@ -22,6 +22,7 @@ public class AudioPlayback : MonoBehaviour
     public AudioMixerGroup voiceOverixerGroup;
     public AudioMixerGroup sfxMixerGroup;
     public AudioMixerGroup musicMixerGroup;
+    public AudioMixerGroup bubblesMixerGroup;
 
     [SerializeField] private AudioClip ambientClip;
 
@@ -62,7 +63,7 @@ public class AudioPlayback : MonoBehaviour
         PlayAmbient();
 
         _bubbleSource = Instantiate(audioSourcePrefab, transform);
-        _bubbleSource.outputAudioMixerGroup = ambientMixerGroup;
+        _bubbleSource.outputAudioMixerGroup = bubblesMixerGroup;
         _bubbleSource.loop = true;
         
         _voiceOverSource = Instantiate(audioSourcePrefab, transform);
@@ -144,7 +145,7 @@ public class AudioPlayback : MonoBehaviour
         if(clip != null && clip.audioClip != null)
         {
             var source = GetAudioSource();
-            source.PlayOneShot(_currentClip.audioClip);
+            source.PlayOneShot(clip.audioClip);
         }
     }
 

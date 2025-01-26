@@ -331,8 +331,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6909775453046244145}
     - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
+      propertyPath: bubblesMixerGroup
+      value: 
+      objectReference: {fileID: -7717659552379442403, guid: fa686093e374845aa89067959ea32b6a, type: 2}
+    - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: automaticallyPlaySong
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2277734541099548811, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: m_Name
