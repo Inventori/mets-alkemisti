@@ -1,6 +1,7 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Initialize : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Initialize : MonoBehaviour
     [SerializeField] private RectTransform orderingPoint;
     [SerializeField] private RectTransform despawningPoint;
     [SerializeField] private TMP_Text _timerText;
+    [SerializeField] private RectTransform itemInPannu;
 
     private PontikkaSystem _pontikkaSystem;
 
@@ -55,12 +57,17 @@ public class Initialize : MonoBehaviour
 
     private void EndCurrentRound(bool success)
     {
+        pontikkaUI.HideBubbles();
+        pontikkaUI.UpdateItemInPannu(success ? orders.Orders[_currentOrder].succeededSprite : orders.Orders[_currentOrder].failedSprite);
+        orderingHobo.UpdateItem(success);
+        
         if (success)
         {
             _currentOrder++;
         }
         else
         {
+            //RAIVO!
         }
 
         var sequence = DOTween.Sequence();
@@ -73,11 +80,20 @@ public class Initialize : MonoBehaviour
     {
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(2.5f);
-        sequence.Append(orderingHobo.MoveHoboTo(orderingPoint.anchoredPosition.x, 3f));
+        sequence.Append(orderingHobo.MoveHoboTo(orderingPoint.anchoredPosition.x, 3f).OnComplete(()=>
+        {
+            orderingHobo.SetItemParent(orderingHobo.ParentRectTransform);
+        }));
+        sequence.Append(orderingHobo.MoveItem(itemInPannu.anchoredPosition).OnComplete(() =>
+        {
+            orderingHobo.ShowItem(false);
+            pontikkaUI.UpdateItemInPannu(orders.Orders[_currentOrder].ingredientsSprite);
+        }));
         sequence.AppendInterval(2.5f).OnComplete(() =>
         {
             _pontikkaSystem.SetNewGoal(orders.Orders[_currentOrder]);
             _pontikkaSystem.StartNewRound();
+            pontikkaUI.SetBubbles();
         });
 
         return sequence;
@@ -87,6 +103,12 @@ public class Initialize : MonoBehaviour
     {
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(2.5f);
+        sequence.Append(orderingHobo.MoveItemToHobo().OnStart(() =>
+        {
+            orderingHobo.SetItemParent(orderingHobo.RectTransform);
+            orderingHobo.ShowItem(true);
+            pontikkaUI.HideItemInPannu();
+        }));
         sequence.Append(orderingHobo.MoveHoboTo(despawningPoint.anchoredPosition.x, 6f));
         sequence.AppendInterval(2.5f);
         return sequence;
