@@ -33,10 +33,15 @@ public class PontikkaSystem
     private Order currentOrder;
     public Action<bool> OnRoundEnd;
     
-    public PontikkaSystem()
+    private AudioPlayback audioPlayback;
+    private int bubbleInt;
+
+    
+    public PontikkaSystem(AudioPlayback audio)
     {
-      
+      audioPlayback = audio; 
     }
+    
     public void SetNewGoal(Order newOrder)
     {
         currentOrder = newOrder;
@@ -80,20 +85,38 @@ public class PontikkaSystem
         {
             return;
         }
-
         _completePercentage = CalculateOrderScore();
+        
+        var bubbles = 2;
+        if (_completePercentage > 0.7f)
+        {
+            bubbles = 3;
+        }
+        else if (_completePercentage < 0.3f)
+        {
+            bubbles = 1;
+        }
+
+        if (bubbles != bubbleInt)
+        {
+            bubbleInt = bubbles;
+            audioPlayback.PlayBubbles(bubbleInt);
+        }
     }
+    
 
     public void StartNewRound()
     {
         _timer = RoundTimer;
         _running = true;
+        CheckGoalProgress();
     }
 
     private void RoundEnded()
     {
         var success = CalculateOrderScore() > .5f;
         OnRoundEnd?.Invoke(success);
+        audioPlayback.PlayBubbles(0);
     }
     
     private void PontikkaGoBoom()

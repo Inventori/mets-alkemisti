@@ -26,10 +26,10 @@ public class Initialize : MonoBehaviour
 
     private Sequence _newCharacterSequence;
     private int _currentOrder;
-
+    
     void Start()
     {
-        _pontikkaSystem = new PontikkaSystem();
+        _pontikkaSystem = new PontikkaSystem(audioPlayback);
         _pontikkaSystem.OnRoundEnd = EndCurrentRound;
 
         if (_debug)
@@ -65,11 +65,13 @@ public class Initialize : MonoBehaviour
         orderingHobo.UpdateItem(success);
         
         if (success)
-        {
+        {   
+            audioPlayback.PlaySfx("item_success");
             audioPlayback.PlayVoiceOver(orders.Orders[_currentOrder].voiceOverSuccess,RoundCleared);
         }
         else
         {
+            audioPlayback.PlaySfx("item_fail");
             audioPlayback.PlayVoiceOver(orders.Orders[_currentOrder].voiceOverFail, b =>
             {
                 pontikkaUI.GameOver(ReloadScene);
@@ -98,6 +100,7 @@ public class Initialize : MonoBehaviour
         }));
         sequence.Append(orderingHobo.MoveItem(itemInPannu.anchoredPosition).OnComplete(() =>
         {
+            audioPlayback.PlaySfx("splash");
             orderingHobo.ShowItem(false);
             pontikkaUI.UpdateItemInPannu(orders.Orders[_currentOrder].ingredientsSprite);
             audioPlayback.PlayVoiceOver(orders.Orders[_currentOrder].voiceOverStart,InitNewRound);
