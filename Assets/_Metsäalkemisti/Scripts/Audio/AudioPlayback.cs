@@ -15,6 +15,8 @@ public class AudioPlayback : MonoBehaviour
     private AudioSource _voiceOverSource;
     private AudioSource _ambientSource;
     private AudioSource _musicSource;
+    private AudioSource _bubbleSource;
+
 
     public AudioMixerGroup ambientMixerGroup;
     public AudioMixerGroup voiceOverixerGroup;
@@ -29,6 +31,10 @@ public class AudioPlayback : MonoBehaviour
     [SerializeField] private AudioClip gameOverMusic;
     [SerializeField] private AudioClip gameCompletedMusic;
 
+    [SerializeField] private AudioClip goodBubble;
+    [SerializeField] private AudioClip neutralBubble;
+    [SerializeField] private AudioClip badBubble;
+    
     [SerializeField] private GameObject subtitlePanel;
     [SerializeField] private Button proceedButton;
     [SerializeField] private TMP_Text subtitleText;
@@ -55,6 +61,10 @@ public class AudioPlayback : MonoBehaviour
         _ambientSource.loop = true;
         PlayAmbient();
 
+        _bubbleSource = Instantiate(audioSourcePrefab, transform);
+        _bubbleSource.outputAudioMixerGroup = ambientMixerGroup;
+        _bubbleSource.loop = true;
+        
         _voiceOverSource = Instantiate(audioSourcePrefab, transform);
         _voiceOverSource.outputAudioMixerGroup = voiceOverixerGroup;
 
@@ -63,6 +73,9 @@ public class AudioPlayback : MonoBehaviour
         _musicSource.loop = true;
         
         PlaySong(automaticallyPlaySong);
+
+        subtitlePanel.SetActive(false);
+        namePanel.SetActive(false);
     }
 
     private void OnEnable()
@@ -201,6 +214,21 @@ public class AudioPlayback : MonoBehaviour
             _currentClip = null;
             _onClipFinished = null;
             subtitlePanel.SetActive(false);
+        }
+    }
+
+    public void PlayBubbles(int value)
+    {
+        _bubbleSource.Stop();
+        if (value == 1)
+        {
+            _bubbleSource.PlayOneShot(badBubble);
+        } else if (value == 2)
+        {
+            _bubbleSource.PlayOneShot(neutralBubble);
+        } else if (value == 3)
+        {
+            _bubbleSource.PlayOneShot(goodBubble);
         }
     }
 }

@@ -303,13 +303,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3707160451936632490}
     - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
+      propertyPath: badBubble
+      value: 
+      objectReference: {fileID: 8300000, guid: 01f758533fcf049b09c891ac2f167812, type: 3}
+    - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: namePanel
       value: 
       objectReference: {fileID: 1620809912078305850}
     - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
+      propertyPath: goodBubble
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f3d5336b6da840d099a6eacee705f80, type: 3}
+    - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: subtitleText
       value: 
       objectReference: {fileID: 1675332602279743873}
+    - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
+      propertyPath: neutralBubble
+      value: 
+      objectReference: {fileID: 8300000, guid: 686d6616cefb24af18b670f62e13f537, type: 3}
     - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: proceedButton
       value: 
@@ -320,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 6909775453046244145}
     - target: {fileID: 250704197972542175, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: automaticallyPlaySong
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2277734541099548811, guid: 4baaecd9571db4c92a1292da374f1bdb, type: 3}
       propertyPath: m_Name
@@ -391,6 +403,14 @@ PrefabInstance:
     - target: {fileID: 404444949703870321, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333907300361796687, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
+      propertyPath: m_text
+      value: '[Subtitle...]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333907300361796687, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 5803807486696892508, guid: a5d2b89a2fd994bba8c79c6483a26052, type: 3}
       propertyPath: m_Name
